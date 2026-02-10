@@ -3,96 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Můj IT Profil</title>
+    <title>Tadeáš Bittner | Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-light">
+<body class="bg-dark text-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top shadow-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Bittner Portfolio</a>
-            <div class="ms-auto">
-                <a href="https://github.com/" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+            <a class="navbar-brand fw-bold text-uppercase cyber-text" href="#"><i class="fas fa-terminal me-2"></i>Bittner.dev</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">O mně</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekty</a></li>
+                </ul>
+                <div class="ms-3">
+                    <a href="https://github.com/" class="text-white me-3 social-icon"><i class="fab fa-github fa-lg"></i></a>
+                    <a href="#" class="text-white social-icon"><i class="fab fa-discord fa-lg"></i></a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header class="bg-primary text-white text-center py-5">
+    <header class="hero-section text-center d-flex align-items-center justify-content-center">
         <div class="container">
-            <img src="https://via.placeholder.com/150" class="rounded-circle mb-3 border border-3 border-white" alt="Profilová fotka">
-            <h1 class="display-4">Tadeáš Bittner</h1>
-            <p class="lead">Student IT | Sigma vývojář | Ajťák z Chongchingu</p>
+            <div class="profile-img-wrapper mb-4">
+                <img src="https://via.placeholder.com/180" class="rounded-circle profile-img" alt="Tadeáš Bittner">
+            </div>
+            <h1 class="display-3 fw-bold cyber-glitch">Tadeáš Bittner</h1>
+            <p class="lead text-cyan mb-4">Student IT | Sigma vývojář | Ajťák z Chongchingu</p>
+            <a href="#contact" class="btn btn-outline-cyan btn-lg px-5 rounded-pill">Kontaktovat</a>
         </div>
     </header>
 
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
+    <div class="container my-5 pt-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-4">
+                <div class="card bg-darker border-0 shadow-neon mb-4 h-100" id="about">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-user me-2"></i>O mně</h5>
-                        <p class="card-text">Jsem student se zájmem o technologie, hardware a programování. Mám v oblibě hrát deskovky, hlavně DND</p>
+                        <h4 class="card-title text-uppercase cyber-text"><i class="fas fa-user-astronaut me-2"></i>O mně</h4>
+                        <p class="card-text text-gray">Jsem student se zájmem o technologie, hardware a programování.</p>
+                        <p class="card-text text-gray">Když zrovna nekódím, najdeš mě u deskovek.</p>
+                        <div class="d-flex align-items-center mt-3 p-3 rounded bg-black">
+                            <i class="fas fa-dice-d20 fa-2x text-purple me-3"></i>
+                            <div>
+                                <h6 class="mb-0 text-white">Dungeons & Dragons</h6>
+                                <small class="text-muted">Level 10 Dungeon Master</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card mb-4 shadow-sm">
+                <div class="card bg-darker border-0 shadow-neon mb-4" id="skills">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-code me-2"></i>Dovednosti</h5>
-                        <span class="badge bg-secondary">C++</span>
-                        <span class="badge bg-secondary">CSharp</span>
-                        <span class="badge bg-secondary">Linux</span>
-                        <span class="badge bg-secondary">Kreativní tvorba</span>
+                        <h4 class="card-title text-uppercase cyber-text mb-4"><i class="fas fa-code me-2"></i>Tech Stack</h4>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between"><span class="fw-bold">C++</span> <span>85%</span></div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-cyan" role="progressbar" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between"><span class="fw-bold">C# (CSharp)</span> <span>70%</span></div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-purple" role="progressbar" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between"><span class="fw-bold">Linux / Bash</span> <span>60%</span></div>
+                            <div class="progress" style="height: 8px;">
+                                <div class="progress-bar bg-green" role="progressbar" style="width: 60%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <span class="badge bg-dark-border text-cyan">Kreativní tvorba</span>
+                            <span class="badge bg-dark-border text-cyan">Git</span>
+                            <span class="badge bg-dark-border text-cyan">Hardware</span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-body">
-                        <h5 class="card-title"><i class="fas fa-envelope me-2"></i>Kontakt</h5>
-                        <p class="mb-0">tadeas.bittner@seznam.cz</p>
-                        <p class="mb-0">Název tvé školy</p>
+
+                <div class="card bg-darker border-0 shadow-neon mb-4" id="contact">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-uppercase cyber-text"><i class="fas fa-paper-plane me-2"></i>Kontakt</h4>
+                        <p class="mb-2 mt-3"><a href="mailto:tadeas.bittner@seznam.cz" class="text-decoration-none text-white fs-5 hover-underline">tadeas.bittner@seznam.cz</a></p>
+                        <p class="text-muted small">SPŠ a VOŠ Příbram</p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8">
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header bg-white">
-                        <h5 class="mb-0">Vzdělání</h5>
+            <div class="col-lg-8">
+                
+                <div class="card bg-darker border-0 shadow-neon mb-4" id="projects">
+                    <div class="card-header bg-transparent border-bottom border-secondary">
+                        <h4 class="mb-0 cyber-text text-uppercase"><i class="fas fa-laptop-code me-2"></i>Projekty</h4>
                     </div>
                     <div class="card-body">
-                        <h6 class="fw-bold">Informační technologie v průmyslu</h6>
-                        <p class="text-muted">Střední průmyslová škola a Vyšší odborná škola Příbram | 2022 - Současnost</p>
-                        <p>Relevantní předměty: Operační systémy, Programování a vývoj aplikací, Matematika, Hardware.</p>
+                        <div class="project-item p-3 mb-3 rounded hover-lift">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="fw-bold text-cyan">Osobní Vývojový Projekt (Hra)</h5>
+                                <span class="badge bg-danger">In Progress</span>
+                            </div>
+                            <p class="text-gray mb-2">Vývoj komplexní videohry v jazyce C++ s využitím vlastního enginu.</p>
+                            <div class="text-muted small"><i class="fas fa-code-branch me-1"></i> C++ | OpenGL | Physics</div>
+                        </div>
+
+                        <hr class="border-secondary">
+
+                        <div class="project-item p-3 rounded hover-lift">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h5 class="fw-bold text-purple">Školní IT Projekt</h5>
+                                <span class="badge bg-success">Dokončeno</span>
+                            </div>
+                            <p class="text-gray mb-2">Vedoucí týmu při návrhu technologického produktu. Koordinace a prezentace.</p>
+                            <div class="text-muted small"><i class="fas fa-users me-1"></i> Team Leader | Management</div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card mb-4 shadow-sm">
-                    <div class="card-header bg-white">
-                        <h5 class="mb-0">Projekty a Zkušenosti</h5>
+                <div class="card bg-darker border-0 shadow-neon">
+                    <div class="card-header bg-transparent border-bottom border-secondary">
+                        <h4 class="mb-0 cyber-text text-uppercase"><i class="fas fa-graduation-cap me-2"></i>Vzdělání</h4>
                     </div>
                     <div class="card-body">
-                        <div class="mb-3">
-                            <h6 class="fw-bold">Školní IT Projekt</h6>
-                            <p class="text-muted">Role: Vedoucí týmu | Září - Prosinec 2024</p>
-                            <p>Představení vymyšleného technologického produktu.</p>
-                        </div>
-                        <hr>
-                        <div>
-                            <h6 class="fw-bold">Osobní Vývojový Projekt</h6>
-                            <p class="text-muted">Role: Vývojář | Současnost</p>
-                            <p>Vytvoření komplexní videohry v C++.</p>
+                        <div class="education-item ps-3 border-start border-3 border-cyan">
+                            <h5 class="fw-bold">Informační technologie v průmyslu</h5>
+                            <p class="text-cyan mb-1">SPŠ a VOŠ Příbram | 2022 - Současnost</p>
+                            <p class="text-gray small">Relevantní předměty: Operační systémy, Programování a vývoj aplikací, Matematika, Hardware.</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 
-    <footer class="text-center py-4 text-muted">
-        <p>&copy; 2026 Tadeáš Bittner. Vytvořeno na GitHub Pages.</p>
+    <footer class="text-center py-4 text-muted bg-black mt-5 border-top border-secondary">
+        <p class="mb-0">&copy; 2026 Tadeáš Bittner. <span class="text-cyan">Built with Code & Coffee.</span></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
