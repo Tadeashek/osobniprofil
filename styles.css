@@ -1,103 +1,128 @@
-/* Základní nastavení */
+/* === Základní nastavení === */
 body {
-    background-color: #0f0f12; /* Hodně tmavá šedá, skoro černá */
+    background-color: #0a0a0d; /* Ještě tmavší černá */
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
 }
 
-/* Nadpisy jako ze sci-fi filmu */
+/* Nadpisy */
 .cyber-text, h1, h2, h3, h4 {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 1px;
 }
 
-/* Hero sekce s přechodem */
-.hero-section {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-    min-height: 80vh;
-    border-bottom: 2px solid #00f2ff;
-    padding-top: 60px;
-}
-
+/* === Barvičky === */
 .text-cyan { color: #00f2ff !important; }
 .text-purple { color: #bc13fe !important; }
+.text-green { color: #00ff41 !important; }
 .text-gray { color: #b0b0b0 !important; }
 .bg-black { background-color: #000000 !important; }
 
-/* Tmavší karty */
-.bg-darker {
-    background-color: #16161a;
+/* === Komponenty === */
+
+/* Hero sekce */
+.hero-section {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
+    min-height: 70vh;
+    border-bottom: 1px solid #333;
+    padding-top: 80px;
 }
 
-/* Neonové efekty */
+.profile-img {
+    border: 3px solid #00f2ff;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+}
+
+/* Tlačítko s září */
+.glow-button {
+    color: #00f2ff;
+    border-color: #00f2ff;
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+    background-color: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
+}
+
+/* Karty */
+.bg-darker {
+    background-color: #131316; /* Tmavší šedá pro karty */
+}
+
 .shadow-neon {
     transition: all 0.3s ease;
-    border: 1px solid #333;
+    border: 1px solid #2a2a30;
 }
 
 .shadow-neon:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    transform: translateY(-3px);
     border-color: #00f2ff;
+    box-shadow: 0 4px 20px rgba(0, 242, 255, 0.15);
 }
 
-/* Profilová fotka */
-.profile-img {
-    border: 3px solid #00f2ff;
-    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
-}
-
-/* Tlačítka */
-.btn-outline-cyan {
-    color: #00f2ff;
-    border-color: #00f2ff;
-}
-
-.btn-outline-cyan:hover {
-    background-color: #00f2ff;
-    color: #000;
-    box-shadow: 0 0 15px #00f2ff;
-}
-
-/* Progress bary */
-.progress {
-    background-color: #333;
-    border-radius: 5px;
+/* === OPRAVA: Tech Stack Progress Bary === */
+.tech-progress {
+    background-color: #000000; /* Úplně černé pozadí pro maximální kontrast */
+    border: 1px solid #333;
+    height: 10px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
-.bg-cyan { background-color: #00f2ff; box-shadow: 0 0 10px #00f2ff; }
-.bg-purple { background-color: #bc13fe; box-shadow: 0 0 10px #bc13fe; }
-.bg-green { background-color: #00ff41; box-shadow: 0 0 10px #00ff41; }
+/* Zářící bary */
+.bg-cyan-glow { background-color: #00f2ff; box-shadow: 0 0 12px #00f2ff; }
+.bg-purple-glow { background-color: #bc13fe; box-shadow: 0 0 12px #bc13fe; }
+.bg-green-glow { background-color: #00ff41; box-shadow: 0 0 12px #00ff41; }
 
-/* Badges (štítky) */
-.bg-dark-border {
-    background-color: transparent;
-    border: 1px solid #333;
-    padding: 8px 12px;
-    margin-right: 5px;
+/* Nové Skill Badges */
+.skill-badge {
+    background-color: rgba(0, 242, 255, 0.1);
+    border: 1px solid #00f2ff;
+    color: #00f2ff;
+    padding: 6px 12px;
     border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
     display: inline-block;
 }
 
-/* Hover efekty pro odkazy */
-.social-icon {
-    transition: color 0.3s ease;
-}
-.social-icon:hover {
-    color: #00f2ff !important;
+/* === OPRAVA: Kontakt Sekce === */
+.contact-box {
+    background-color: rgba(0, 242, 255, 0.05);
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
+.contact-box:hover {
+    background-color: rgba(0, 242, 255, 0.1);
+    border-color: #00f2ff;
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.2);
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #00f2ff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+}
+
+/* Projekty hover efekt */
 .hover-lift {
-    transition: transform 0.2s;
-    background-color: #1f1f25;
+    transition: all 0.2s ease;
+    background-color: #1a1a20;
+    border: 1px solid transparent;
 }
 .hover-lift:hover {
     transform: translateX(5px);
-    background-color: #25252c;
+    background-color: #202026;
+    border-color: #333;
 }
+
+.social-icon:hover { color: #00f2ff !important; }
