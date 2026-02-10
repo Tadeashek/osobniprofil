@@ -1,8 +1,8 @@
 /* === Základní nastavení === */
 body {
-    background-color: #0a0a0d; /* Ještě tmavší černá */
+    background-color: #0a0a0d; 
     font-family: 'Roboto', sans-serif;
-    color: #e0e0e0;
+    color: #ffffff !important; /* Vynucená bílá pro celé tělo */
 }
 
 /* Nadpisy */
@@ -15,22 +15,25 @@ body {
 .text-cyan { color: #00f2ff !important; }
 .text-purple { color: #bc13fe !important; }
 .text-green { color: #00ff41 !important; }
-.text-gray { color: #b0b0b0 !important; }
+.text-white { color: #ffffff !important; } /* Pro jistotu */
 .bg-black { background-color: #000000 !important; }
 
 /* === Komponenty === */
 
-/* Hero sekce */
+/* Hero sekce bez obrázku */
 .hero-section {
     background: radial-gradient(circle at center, #1a1a2e 0%, #000000 100%);
-    min-height: 70vh;
+    min-height: 60vh; /* Zmenšeno, když tam není fotka */
     border-bottom: 1px solid #333;
     padding-top: 80px;
 }
 
-.profile-img {
-    border: 3px solid #00f2ff;
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+.tracking-wide {
+    letter-spacing: 2px;
+}
+
+.border-cyan {
+    border-color: #00f2ff !important;
 }
 
 /* Tlačítko s září */
@@ -49,7 +52,7 @@ body {
 
 /* Karty */
 .bg-darker {
-    background-color: #131316; /* Tmavší šedá pro karty */
+    background-color: #131316; 
 }
 
 .shadow-neon {
@@ -63,21 +66,20 @@ body {
     box-shadow: 0 4px 20px rgba(0, 242, 255, 0.15);
 }
 
-/* === OPRAVA: Tech Stack Progress Bary === */
+/* Tech Stack Progress Bary */
 .tech-progress {
-    background-color: #000000; /* Úplně černé pozadí pro maximální kontrast */
+    background-color: #000000;
     border: 1px solid #333;
     height: 10px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* Zářící bary */
 .bg-cyan-glow { background-color: #00f2ff; box-shadow: 0 0 12px #00f2ff; }
 .bg-purple-glow { background-color: #bc13fe; box-shadow: 0 0 12px #bc13fe; }
 .bg-green-glow { background-color: #00ff41; box-shadow: 0 0 12px #00ff41; }
 
-/* Nové Skill Badges */
+/* Skill Badges */
 .skill-badge {
     background-color: rgba(0, 242, 255, 0.1);
     border: 1px solid #00f2ff;
@@ -89,7 +91,7 @@ body {
     display: inline-block;
 }
 
-/* === OPRAVA: Kontakt Sekce === */
+/* Kontakt Sekce */
 .contact-box {
     background-color: rgba(0, 242, 255, 0.05);
     border: 1px solid rgba(0, 242, 255, 0.2);
